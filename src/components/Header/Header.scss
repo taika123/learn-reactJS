@@ -1,0 +1,11 @@
+.navbar {
+  z-index: 10;
+  & .btn {
+    padding: 8px 16px;
+    background-color: transparent;
+  }
+}
+
+nav.bg-body-tertiary.navbar.navbar-expand-lg.navbar-light {
+  background-color: rgba(0, 0, 0, 0) !important;
+}

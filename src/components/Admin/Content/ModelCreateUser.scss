@@ -1,0 +1,24 @@
+.row-media {
+  display: flex;
+  align-items: center;
+
+  .image {
+    display: flex;
+    padding: 10px;
+    // border: 1px dashed red;
+    .cursor {
+      cursor: pointer;
+      padding: 10px;
+      background-color: #ccc;
+      border-radius: 4px;
+
+      &:hover {
+        background-color: #666;
+      }
+    }
+  }
+  .preview-image {
+    color: #ccc;
+    padding: 10px;
+  }
+}

@@ -1,27 +1,19 @@
-import { useState } from "react";
-import Todo from "./components/Todo";
-import AlbumList from "./components/Album/AlbumList/AlbumList";
-import { Link, Route, Routes } from "react-router-dom";
+import React from "react";
+import Header from "./components/Header/Header";
+import { Outlet } from "react-router-dom";
 
 function App() {
-  let myArr = ["Javascript", "CSS", "PHP", "JS"];
-  myArr = ["DASH", ...myArr];
-  console.log(myArr);
   return (
-    <div className="App">
-      Home page
-      <p>
-        <Link to="/todos">Todos</Link>
-      </p>
-      <p>
-        <Link to="/albums">albums</Link>
-      </p>
-      <Routes>
-        <Route path="/todos" element={<Todo />} />
-        <Route path="/albums" element={<AlbumList />} />
-      </Routes>
-      {/* <Todo />
-      <AlbumList /> */}
+    <div className="app-container">
+      <div className="header-container">
+        <Header />
+      </div>
+      <div className="main-container">
+        <div className="sidebar-container"></div>
+        <div className="content-container">
+          <Outlet></Outlet>
+        </div>
+      </div>
     </div>
   );
 }
