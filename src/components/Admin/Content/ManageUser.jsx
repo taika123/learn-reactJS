@@ -2,6 +2,7 @@ import React from "react";
 import ModalCreateUser from "./ModelCreateUser";
 import { useState } from "react";
 import "./ManageUser.scss";
+import TableContent from "./TableContent";
 function ManageUser() {
   const [show, setShow] = useState(false);
 
@@ -15,7 +16,7 @@ function ManageUser() {
           </button>
         </div>
         <div className="table-content">
-          Table Content
+          <TableContent />
           <ModalCreateUser show={show} setShow={setShow} />
         </div>
       </div>
